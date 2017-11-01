@@ -44,8 +44,33 @@ public class FrontCompression {
         /*
          * Complete this function.
          */
+        String result = "";
+        String[] splited = corpus.split("\\n");
+        int[] count = new int[splited.length];
+        for (int i = 1; i < splited.length; i++) {
+            //System.out.println(i);
+            //if (splited[i].length() <= splited[i-1].length()) {
+            for (int j = 0; j < max(splited[i].length(), splited[i - 1].length()); j++) {
+                    if (splited[i].charAt(j) != (splited[i - 1]).charAt(j)) {
+                        count[i] += j;
 
-        return "";
+                }
+            result += splited[0] + "" + count[i]
+                    + splited[i].substring(count[i], splited[i].length() - 1);
+            }
+        }
+        return result;
+    }
+
+    /**
+     * no idea what's this function for.
+     * @param length a length
+     * @param length2 another length
+     * @return something
+     */
+    private static int max(int length, int length2) {
+        // TODO Auto-generated method stub
+        return 0;
     }
 
     /**
@@ -67,8 +92,12 @@ public class FrontCompression {
         /*
          * Complete this function.
          */
-
-        return "";
+        String output = "";
+        String[] words = corpus.split("\\n");
+        for (int i = 0; i < words.length; i++) {
+            if ()
+        }
+        return output;
     }
 
     /**
